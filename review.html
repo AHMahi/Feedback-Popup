@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<head>
+  <link rel="stylesheet" href="CSS/reviewstyle.css">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <link href='https://www.cellcast.com.au/client/views/besma/assets/js/bootstrap/dist/css/bootstrap.css'
+    rel='stylesheet'>
+  <script src="https://www.cellcast.com.au/client/views/besma/assets/js/jquery.min.js"></script>
+  <script src="https://www.cellcast.com.au/client/views/besma/assets/js/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#welcom_step_modal"> Launch demo modal
+  </button>
+  <!-- Modal -->
+  <div class="modal fade" id="welcom_step_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content step_modal">
+        <div class="modal-body">
+          <div class="popup center">
+              <div class="title"> We need your feedback! </div>
+              <div class = "body-title-gap"></div>
+              <div class="container-items">
+                <div class="description">How happy are you with our platform?</div>
+                <div class="rate">
+                  <input type="radio" id="rating10" name="rate" value="0" />
+                  <label for="rating10" class="individual-rating-box" title="text">10</label>
+                  <input type="radio" id="rating9" name="rate" value="1" />
+                  <label for="rating9"  class="individual-rating-box" title="text">9</label>
+                  <input type="radio" id="rating8" name="rate" value="2" />
+                  <label for="rating8"  class="individual-rating-box" title="text">8</label>
+                  <input type="radio" id="rating7" name="rate" value="3" />
+                  <label for="rating7"  class="individual-rating-box" title="text">7</label>
+                  <input type="radio" id="rating6" name="rate" value="4" />
+                  <label for="rating6"  class="individual-rating-box" title="text">6</label>
+                  <input type="radio" id="rating5" name="rate" value="5" />
+                  <label for="rating5"  class="individual-rating-box" title="text">5</label>
+                  <input type="radio" id="rating4" name="rate" value="6" />
+                  <label for="rating4"  class="individual-rating-box" title="text">4</label>
+                  <input type="radio" id="rating3" name="rate" value="7" />
+                  <label for="rating3"  class="individual-rating-box" title="text">3</label>
+                  <input type="radio" id="rating2" name="rate" value="8" />
+                  <label for="rating2"  class="individual-rating-box" title="text">2</label>
+                  <input type="radio" id="rating1" name="rate" value="9" />
+                  <label for="rating1"  class="individual-rating-box" title="text">1</label>
+                  <input type="radio" id="rating0" name="rate" value="10" />
+                  <label for="rating0"  class="individual-rating-box" title="text">0</label>
+                </div>
+                <div class="rating-text">
+                  <div class="rating-bad">
+                    <text data-dismiss="modal"> Extremely Happy </text>
+                  </div>
+                  <div class="rating-good" data-dismiss="modal">
+                    <text data-dismiss="modal"> Not happy at all </text>
+                  </div>
+                </div>
+                </div>
+                <div class="specify-others">
+                  <p class="popup-review-text">Tell us what we need to work on*</p>
+                  <div style="width: 80%">
+                    <input type="text" id="others" class="text-area" placeholder="Write your feedback here" required>
+                  </div>
+                </div>
+                <div class="industry-selector-container">
+                  <p class="popup-review-text">How did you hear about us?</p>
+                  <div class="option">
+                    <div class="select">
+                      <select name="industry" id="industry">
+                        <option selected disabled >Google search, Facebook...</option>
+                        <option value="Google">Google</option>
+                        <option value="Emails">Emails</option>
+                        <option value="Friends & Family">Friends & Family</option>
+                        <option value="Instagram">Instagram</option>
+                        <option value="Facebook">Marketing</option>
+                        <option value="Twitter">Fitness & Health</option>
+                        <option value="Linkedin">IT</option>
+                        <option value="Youtube">Recruitment</option>
+                      </select>
+                    </div>
+                  </div>
+              </div>
+              <div class="line">
+                <hr>
+              </div>
+                <div class="footer_button">
+                  <div class="dismiss-btn">
+                    <button id="dismiss-popup-btn" data-dismiss="modal"> Ask me Later </button>
+                  </div>
+                  <div class="footer_button_group">
+                    <div class="continue-btn" data-dismiss="modal">
+                      <button type="submit" id="continue-popup-btn"> Send Feedback </button>
+                    </div>
+                  </div>
+                </div>
+                <div>           
+            </div>
+        </div>
+      </div>
+    </div>
+</body>
+
+<!--Jquery-->
+<script>
+
+//const ratingForm = document.querySelector(".specify-others");  
+  const inputs = document.querySelectorAll(".rate input");
+// const form = 
+let showRatingForm = false;
+inputs.forEach(input => {
+  input.addEventListener("click", function(e) {
+  rating = parseInt(e.target.value);
+    rating >= 5 ? showRatingForm = true: showRatingForm = false;
+    if(showRatingForm) {
+      console.log(showRatingForm);
+//       Add css class to show box
+      $('.specify-others').css('display', 'flex')
+      // option.classList.add('active');
+    } else {
+      $('.specify-others').css('display', 'none')
+//   Add css class to remove box
+      }
+}) 
+})
+
+
+</script>
+
+</html>
