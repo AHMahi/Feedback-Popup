@@ -1,0 +1,373 @@
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+::placeholder {
+    color: #A4A7BE;
+  }
+
+body {
+    background: #FFFFFF;
+}
+
+.center {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 14px;
+    line-height: 110%;
+    text-align: center;
+    color: #5F6276;
+}
+
+.step_modal {
+    width: clamp(625px, 30%, 825px);
+    padding: 25px 25px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-sizing: border-box;
+    z-index: 2;
+}
+
+.icon {
+
+    padding: 30px;
+    margin-top: 10px; 
+
+}
+
+.popup .title {
+    color: #232323;
+    margin: 5px 0px;
+    font-size: 28px;
+    font-weight: 600;
+    padding: 10px 0px;
+}
+
+.popup .description {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: left;
+    color: #5F6276;
+    padding: 10px 40px;
+}
+
+/* Next Button Styling */
+.popup .continue-btn button {
+    padding: 13px 24px;
+    background: #4B9DF0;
+    color: #FFFFFF;
+    border: 0px solid #4B9DF0;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 110%;
+    outline: none;
+    border-radius: 5px;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+    gap: 8px;
+    align-items: center;
+
+}
+
+.popup .continue-btn button:hover {
+    color: #FFFFFF;
+    background: #237DD8;
+
+}
+
+.popup .footer_button {
+    display: block;
+    text-align: left;
+}
+
+/* Previous Button Styling */
+
+
+
+.popup .previous-btn button {
+    padding: 13px 26px;
+    background: #F3FAFE;
+    color: #237DD8;
+    border: 0px solid #4B9DF0;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 110%;
+    outline: none;
+    border-radius: 5px;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+    gap: 8px;
+    align-items: center;
+    margin-right: 8px;
+}
+
+.popup .previous-btn button:hover {
+    background: #237DD8;
+    color: #FFFFFF;
+}
+
+.popup .footer_button_group {
+    display: inline;
+    float: right;
+}
+
+.popup .footer_button {
+    display: block;
+    text-align: left;
+}
+
+/* Dismiss Button Styling */
+
+.popup .dismiss-btn {
+    display: inline-block;
+}
+
+.popup .continue-btn {
+    display: inline;
+}
+
+.popup .previous-btn {
+    display: inline;
+}
+
+.popup .dismiss-btn button {
+    padding: 13px 24px;
+    background: #FFFFFF;
+    color: #7F8297;
+    border: 0px solid;
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 110%;
+    outline: none;
+    border-radius: 5px;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+    gap: 8px;
+    border: 2px solid transparent;
+}
+
+.popup .dismiss-btn button:hover {
+    color: #FFFFFF;
+    color: #237DD8
+}
+
+.popup .line {
+    padding-top: 40px;
+}
+
+.option {
+    display: inline-block;
+    width: 556px;
+}
+
+.page-two-text {
+    color: #5F6276;
+    font-size: 14px;
+    float: left;
+}
+
+/*page 2 select bar*/
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: #F6F8FA;
+    background-image: none;
+
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+.select {
+    position: relative;
+    display: flex;
+    width: 80%;
+    height: 44px;
+    line-height: 20px;
+    background: #F6F8FA;
+    overflow: hidden;
+    border-radius: 8px;
+    color: #5F6276;
+    font-size: 14px;
+    padding-left: 12px;
+}
+
+.select::after {
+    content: '>';
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-weight: bold;
+    padding: 0 lem;
+    cursor: pointer;
+    pointer-events: none;
+    transform: rotate(90deg);
+    color: #5F6276;
+}
+
+select {
+    flex: 1;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*area of text box styling */
+input {
+    display: inline;
+    width: 50%;
+    padding: 0.75rem;
+    border-radius: 8px;
+    float: left;
+    height: 44px;
+    outline: none;
+    padding-left: 20px;
+}
+
+.specify-others{
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0rem;
+    width: 90%;
+    justify-content: center;
+    padding-left: 40px;
+    padding-top: 23px;
+    padding-bottom: 8px;
+    color: #5F6276;
+    font-size: 14px;
+}
+
+/* Progrss Bar CSS */
+
+.popup-review-text {
+    float: left;
+    font-size: 14px;
+}
+
+.form-step {
+    margin-top: 2rem;
+}
+
+.action-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.industry-selector-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    width: 90%;
+    justify-content: center;
+    padding-left: 4rem;
+}
+
+.industry-selector-container {
+    margin-top: 3rem;
+}
+
+.specify-others div input {
+    background-color: #F6F8FA !important;
+    border: none;
+    width: 446px;
+    height: 93px;
+}
+
+.rate {
+    float: left;
+    padding: 0px 38px;
+    padding-bottom: 3px;
+    display: flex;
+    flex-direction: row-reverse; 
+    
+}
+
+.individual-rating-box{
+    padding: 10px 6px;
+    border-radius: 4px;
+    font-size: 18px;
+    line-height: 20.34px;
+    font-weight: 500;
+}
+
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+
+}
+.rate > label {
+    border: 0px solid black ; 
+    margin-right: 3px;
+    text-align: center;
+    background-color: #F6F8FA;
+}
+
+.rate:not(:checked) > label {
+    float:left;
+    width:38px;
+    height: 38px;
+    cursor:pointer;
+    font-size:18px;
+    color:#5F6276;
+;
+}
+
+.rate:not(:checked) > label:hover{
+    color: #4B9DF0;
+    background: #F3FAFE;
+ 
+}
+
+.rate > input:checked ~ label {
+    background: #4B9DF0;
+    color: #F3FAFE;
+}
+
+.rate > input:checked:hover ~ label {
+    background: #4B9DF0;
+    color: #F3FAFE;
+}
+
+.body-title-gap{
+    padding-top: 30px;
+}
+
+.popup .rating-text {
+    padding-bottom: 70px;
+}
+
+.popup .rating-bad {
+    display: inline;
+    float: right;
+    font-size: 12px;
+    color: #5F6276;
+    padding-right: 47px;
+}
+
+.popup .rating-good{
+    display: inline;
+    float: left;
+    font-size: 12px;
+    padding-left: 39px;
+    color: #5F6276;
+}
+
+
+
+
+
+
